@@ -1,3 +1,7 @@
+This is Steggy's layout, this repo was created from https://github.com/johnstegeman/my_custom_oryx, which lets you add custom code while still using Oryx. 
+
+Original repo readme:
+
 # Oxyx with custom QMK - local compile
 
 Inspired by: https://github.com/poulainpi/oryx-with-custom-qmk
