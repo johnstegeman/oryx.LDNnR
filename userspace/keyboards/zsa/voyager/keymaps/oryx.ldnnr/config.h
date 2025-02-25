@@ -11,9 +11,3 @@
 
 #define RGB_MATRIX_STARTUP_SPD 60
 
-
-/* steggy changes */
-
-#define CHORDAL_HOLD
-
-/* end steggy */
