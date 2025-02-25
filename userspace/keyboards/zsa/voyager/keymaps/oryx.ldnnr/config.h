@@ -15,4 +15,3 @@
 /* steggy */
 
 #define CHORDAL_HOLD
-#define ACTION_DEBUG
