@@ -45,6 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+const uint16_t PROGMEM combo0[] = { KC_G, KC_M, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(combo0, LALT(LGUI(KC_5))),
+};
 
 
 extern rgb_config_t rgb_matrix_config;
