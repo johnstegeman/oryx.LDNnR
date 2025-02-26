@@ -585,3 +585,25 @@ tap_dance_action_t tap_dance_actions[] = {
         [DANCE_9] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_9, dance_9_finished, dance_9_reset),
         [DANCE_10] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_10, dance_10_finished, dance_10_reset),
 };
+
+
+/* steggy */
+
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
+    uint16_t other_keycode, keyrecord_t* other_record) {
+    // Eliminate opt-r and opt-i from holds
+    switch (tap_hold_keycode) {
+        case MT(MOD_LALT, KC_A):
+            if (other_keycode == KC_R) {
+            return false;
+            }
+            break;
+        case MT(MOD_RALT, KC_O):
+            if (other_keycode == KC_I) {
+            return true;
+            }
+            break;
+            }
+    // Otherwise defer to the opposite hands rule.
+    return get_chordal_hold_default(tap_hold_record, other_record);
+}
