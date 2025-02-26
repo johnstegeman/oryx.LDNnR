@@ -9,7 +9,7 @@
 #define PERMISSIVE_HOLD
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "LDNnR/yoojRJ"
+#define SERIAL_NUMBER "LDNnR/Dzz9RK"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 1
 
