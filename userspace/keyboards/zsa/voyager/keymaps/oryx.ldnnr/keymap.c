@@ -20,9 +20,9 @@ enum tap_dance_codes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     LT(3,KC_GRAVE), KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,       
-    CW_TOGG,        KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_EQUAL,       
-    KC_ESCAPE,      MT(MOD_LALT, KC_A),MT(MOD_LCTL, KC_R),MT(MOD_LSFT, KC_S),MT(MOD_LGUI, KC_T),KC_G,                                           KC_M,           MT(MOD_RGUI, KC_N),MT(MOD_RSFT, KC_E),MT(MOD_RCTL, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
-    TD(DANCE_0),    KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       TD(DANCE_1),    
+    CW_TOGG,        KC_B,           KC_L,           KC_D,           KC_C,           KC_V,                                           KC_J,           KC_Y,           KC_O,           KC_U,           KC_SCLN,        KC_EQUAL,       
+    KC_ESCAPE,      MT(MOD_LALT, KC_N),MT(MOD_LCTL, KC_R),MT(MOD_LSFT, KC_T),MT(MOD_LGUI, KC_S),KC_G,                                           KC_P,           MT(MOD_RGUI, KC_H),MT(MOD_RSFT, KC_A),MT(MOD_RCTL, KC_E),MT(MOD_RALT, KC_I),KC_SLASH,       
+    TD(DANCE_0),    KC_X,           KC_Q,           KC_M,           KC_W,           KC_Z,                                           KC_K,           KC_F,           KC_QUOTE,       KC_COMMA,       KC_DOT,         TD(DANCE_1),    
                                                     LT(1,KC_ENTER), KC_TAB,                                         TD(DANCE_2),    LT(2,KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
@@ -55,14 +55,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [5] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_B,           KC_L,           KC_D,           KC_C,           KC_V,                                           KC_J,           KC_Y,           KC_O,           KC_U,           KC_COMMA,       KC_SCLN,        
-    KC_TRANSPARENT, KC_N,           KC_R,           KC_T,           KC_S,           KC_G,                                           KC_P,           KC_H,           KC_A,           KC_E,           KC_I,           KC_MINUS,       
-    KC_TRANSPARENT, KC_X,           KC_Q,           KC_M,           KC_W,           KC_Z,                                           KC_K,           KC_F,           KC_COMMA,       KC_SCLN,        KC_DOT,         TD(DANCE_4),    
+    KC_TRANSPARENT, KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_EQUAL,       
+    KC_TRANSPARENT, MT(MOD_LALT, KC_A),MT(MOD_LCTL, KC_R),MT(MOD_LSFT, KC_S),MT(MOD_LGUI, KC_T),KC_G,                                           KC_M,           MT(MOD_RGUI, KC_N),MT(MOD_RSFT, KC_E),MT(MOD_RCTL, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
+    KC_TRANSPARENT, KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       TD(DANCE_4),    
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
-const uint16_t PROGMEM combo0[] = { KC_G, KC_M, COMBO_END};
+const uint16_t PROGMEM combo0[] = { KC_G, KC_P, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, LALT(LGUI(KC_5))),
@@ -86,7 +86,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [4] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {94,222,206}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
-    [5] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {94,222,206}, {0,0,0}, {0,0,0} },
+    [5] = { {29,255,255}, {94,218,204}, {94,218,204}, {94,218,204}, {94,218,204}, {94,218,204}, {0,0,0}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {0,245,245}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {118,235,221}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {29,255,255}, {0,245,245}, {94,218,204}, {94,218,204}, {94,218,204}, {94,218,204}, {94,218,204}, {94,218,204}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {94,218,204}, {94,218,204}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {139,218,205}, {94,218,204}, {139,218,205}, {139,218,205}, {94,218,204}, {94,218,204}, {94,218,204}, {94,222,206}, {0,245,245}, {29,255,255} },
 
 };
 
